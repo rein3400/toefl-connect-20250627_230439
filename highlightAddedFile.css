@@ -1,0 +1,40 @@
+:root {
+  --color-added-bg: var(--color-highlight, #fffae6);
+  --color-new-badge-bg: var(--color-accent, #f4b400);
+  --color-new-badge-text: var(--color-on-accent, #000000);
+}
+
+.file-list__item--added,
+.file-list__item[data-status="added"] {
+  position: relative;
+  background-color: var(--color-added-bg);
+  animation: fadeAddedHighlight 4s ease-out forwards;
+}
+
+.file-list__item--added .file-list__badge,
+.file-list__item[data-status="added"] .file-list__badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--color-new-badge-bg);
+  color: var(--color-new-badge-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@keyframes fadeAddedHighlight {
+  0%   { background-color: var(--color-added-bg); }
+  60%  { background-color: var(--color-added-bg); }
+  100% { background-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .file-list__item--added,
+  .file-list__item[data-status="added"] {
+    animation: none;
+  }
+}
