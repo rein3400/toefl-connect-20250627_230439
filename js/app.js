@@ -1,10 +1,10 @@
 // Main application entry point
-import { initAnalytics, trackEvent } from './googleAnalyticsTracker.js';
-import './renderInteractivePdfListing.js';
-import './fetchAndRenderBlogPosts.js';
-import './contactFormManager.js';
-import './mentoringBookingFlow.js';
-import { initSimulationCTA } from './insertFloatingCtaForm.js';
+import { initAnalytics, trackEvent } from '../googleAnalyticsTracker.js';
+import '../renderInteractivePdfListing.js';
+import '../fetchAndRenderBlogPosts.js';
+import '../contactFormManager.js';
+import '../mentoringBookingFlow.js';
+import { initSimulationCTA } from '../insertFloatingCtaForm.js';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
