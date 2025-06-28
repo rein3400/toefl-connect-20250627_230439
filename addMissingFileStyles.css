@@ -1,0 +1,145 @@
+.add-missing-file__container {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+@media (min-width: 600px) {
+  .add-missing-file__container {
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+}
+.add-missing-file__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.add-missing-file__description {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+.add-missing-file__form {
+  display: flex;
+  flex-direction: column;
+}
+.add-missing-file__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.add-missing-file__label {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+.add-missing-file__input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: var(--border-radius, 4px);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.add-missing-file__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--focus-color, rgba(0, 123, 255, 0.25));
+}
+.add-missing-file__input--error {
+  border-color: var(--color-danger);
+}
+.add-missing-file__input--error:focus {
+  outline: none;
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px var(--focus-color-error, rgba(220, 53, 69, 0.25));
+}
+.add-missing-file__error-message {
+  font-size: 0.875rem;
+  color: var(--color-danger);
+  margin-top: 0.25rem;
+}
+.add-missing-file__drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 2px dashed var(--color-border, #ccc);
+  border-radius: var(--border-radius, 4px);
+  background-color: var(--color-background-alt, #f9f9f9);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.add-missing-file__drop-zone:focus {
+  outline: 2px dashed var(--focus-color, rgba(0, 123, 255, 0.5));
+  outline-offset: 4px;
+}
+.add-missing-file__drop-zone--active {
+  background-color: var(--color-background-alt-hover, #f1f1f1);
+  border-color: var(--color-primary);
+}
+.add-missing-file__file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+.add-missing-file__file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: var(--color-background-alt, #f9f9f9);
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: var(--border-radius, 4px);
+  margin-bottom: 0.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.add-missing-file__remove-btn {
+  background: none;
+  border: none;
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.25rem;
+}
+.add-missing-file__remove-btn:focus {
+  outline: 2px solid var(--focus-color, rgba(0, 123, 255, 0.5));
+  outline-offset: 2px;
+}
+.add-missing-file__submit {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  border: none;
+  border-radius: var(--border-radius, 4px);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.add-missing-file__submit:hover,
+.add-missing-file__submit:focus {
+  background-color: var(--color-primary-dark);
+}
+.add-missing-file__submit:focus {
+  outline: 2px solid var(--focus-color, rgba(0, 123, 255, 0.5));
+  outline-offset: 2px;
+}
+.add-missing-file__submit:disabled {
+  background-color: var(--color-border, #ccc);
+  cursor: not-allowed;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .add-missing-file__file-item {
+    animation: none !important;
+  }
+}
