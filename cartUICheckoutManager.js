@@ -1,4 +1,4 @@
-import uiComponents from './uiComponentLibrary.js';
+import * as uiComponents from './uiComponentLibrary.js';
 import apiService from './js/apiservice.js';
 
 const CART_STORAGE_KEY = 'toeConnectCart';

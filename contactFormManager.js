@@ -1,6 +1,6 @@
 import formValidator from './ariaFormValidator.js';
 import apiService from './js/apiservice.js';
-import uiComponents from './uiComponentLibrary.js';
+import * as uiComponents from './uiComponentLibrary.js';
 
 const CONTACT_FORM_SELECTOR = '#contact-form';
 const DEFAULT_CONTACT_API_ENDPOINT = '/.netlify/functions/sendConfirmationEmail';
