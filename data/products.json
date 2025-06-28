@@ -1,0 +1,56 @@
+[
+  {
+    "id": "toefl-vocab-guide",
+    "title": "Advanced TOEFL Vocabulary Guide",
+    "description": "Comprehensive collection of 2000+ high-frequency TOEFL words with definitions, examples, and practice exercises.",
+    "topic": "Vocabulary",
+    "level": "Advanced",
+    "price": 29.99,
+    "pdfUrl": "https://example.com/preview/vocab-guide.pdf"
+  },
+  {
+    "id": "reading-strategies",
+    "title": "TOEFL Reading Strategies Handbook",
+    "description": "Master reading comprehension with proven strategies and practice passages from real TOEFL tests.",
+    "topic": "Reading",
+    "level": "Intermediate",
+    "price": 24.99,
+    "pdfUrl": "https://example.com/preview/reading-strategies.pdf"
+  },
+  {
+    "id": "listening-mastery",
+    "title": "TOEFL Listening Mastery Course",
+    "description": "Improve your listening skills with audio exercises, note-taking techniques, and practice tests.",
+    "topic": "Listening",
+    "level": "All Levels",
+    "price": 34.99,
+    "pdfUrl": "https://example.com/preview/listening-mastery.pdf"
+  },
+  {
+    "id": "speaking-confidence",
+    "title": "TOEFL Speaking Confidence Builder",
+    "description": "Build confidence in speaking tasks with templates, sample responses, and pronunciation guides.",
+    "topic": "Speaking",
+    "level": "Beginner",
+    "price": 27.99,
+    "pdfUrl": "https://example.com/preview/speaking-confidence.pdf"
+  },
+  {
+    "id": "writing-excellence",
+    "title": "TOEFL Writing Excellence Manual",
+    "description": "Master both integrated and independent writing tasks with step-by-step guides and sample essays.",
+    "topic": "Writing",
+    "level": "Advanced",
+    "price": 31.99,
+    "pdfUrl": "https://example.com/preview/writing-excellence.pdf"
+  },
+  {
+    "id": "grammar-fundamentals",
+    "title": "TOEFL Grammar Fundamentals",
+    "description": "Essential grammar rules and structures commonly tested in TOEFL with practice exercises.",
+    "topic": "Grammar",
+    "level": "Beginner",
+    "price": 19.99,
+    "pdfUrl": "https://example.com/preview/grammar-fundamentals.pdf"
+  }
+]

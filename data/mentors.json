@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mentor-1",
+    "name": "Dr. Sarah Johnson",
+    "title": "TOEFL Expert & Former ETS Examiner",
+    "experience": "15+ years",
+    "specialties": ["Reading", "Writing", "Test Strategy"],
+    "bio": "Former ETS examiner with extensive experience helping students achieve their TOEFL goals.",
+    "rating": 4.9,
+    "hourlyRate": 75,
+    "availability": {
+      "2024-01-20": ["09:00", "10:00", "14:00", "15:00"],
+      "2024-01-21": ["10:00", "11:00", "16:00"],
+      "2024-01-22": ["09:00", "13:00", "14:00", "15:00"]
+    }
+  },
+  {
+    "id": "mentor-2",
+    "name": "Michael Chen",
+    "title": "TOEFL Speaking & Listening Specialist",
+    "experience": "10+ years",
+    "specialties": ["Speaking", "Listening", "Pronunciation"],
+    "bio": "Native English speaker specializing in helping students improve their speaking and listening skills.",
+    "rating": 4.8,
+    "hourlyRate": 65,
+    "availability": {
+      "2024-01-20": ["11:00", "12:00", "15:00", "16:00"],
+      "2024-01-21": ["09:00", "10:00", "14:00", "15:00"],
+      "2024-01-22": ["10:00", "11:00", "13:00", "16:00"]
+    }
+  }
+]

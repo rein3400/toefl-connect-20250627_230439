@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "title": "10 Essential TOEFL Study Tips for Success",
+    "excerpt": "Discover proven strategies that will help you achieve your target TOEFL score and boost your confidence.",
+    "content": "<p>Preparing for the TOEFL can be challenging, but with the right strategies, you can achieve your target score. Here are 10 essential tips that have helped thousands of students succeed.</p><p><strong>1. Create a Study Schedule</strong><br>Consistency is key. Set aside dedicated time each day for TOEFL preparation.</p><p><strong>2. Practice All Four Skills</strong><br>Don't neglect any section. Balance your practice across reading, listening, speaking, and writing.</p><p><strong>3. Use Official Materials</strong><br>ETS official materials provide the most accurate representation of the actual test.</p>",
+    "author": "Sarah Johnson",
+    "date": "2024-01-15",
+    "category": "Study Tips"
+  },
+  {
+    "id": "2",
+    "title": "How to Improve Your TOEFL Reading Score",
+    "excerpt": "Learn effective reading strategies and techniques to tackle even the most challenging TOEFL reading passages.",
+    "content": "<p>The TOEFL reading section can be intimidating, but with proper strategies, you can significantly improve your performance.</p><p><strong>Skimming and Scanning</strong><br>Learn to quickly identify main ideas and locate specific information.</p><p><strong>Vocabulary Building</strong><br>Expand your academic vocabulary through systematic study and practice.</p>",
+    "author": "Michael Chen",
+    "date": "2024-01-10",
+    "category": "Reading"
+  },
+  {
+    "id": "3",
+    "title": "TOEFL Speaking: Overcoming Nervousness",
+    "excerpt": "Practical tips to build confidence and deliver clear, coherent responses in the TOEFL speaking section.",
+    "content": "<p>Many test-takers find the speaking section the most challenging due to nervousness. Here's how to overcome it.</p><p><strong>Practice Regularly</strong><br>Record yourself speaking and analyze your performance.</p><p><strong>Use Templates</strong><br>Having a structure helps organize your thoughts quickly.</p>",
+    "author": "Emily Rodriguez",
+    "date": "2024-01-05",
+    "category": "Speaking"
+  }
+]
