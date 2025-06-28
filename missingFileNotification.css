@@ -1,0 +1,92 @@
+.missing-file-notification {
+  --mfn-spacing: 0.75rem;
+  --mfn-bg-color: #ffebe8;
+  --mfn-border-color: #dd3c10;
+  --mfn-text-color: #333;
+  --mfn-icon-color: #dd3c10;
+  --mfn-close-hover-bg: rgba(0, 0, 0, 0.05);
+  --mfn-font-family: system-ui, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mfn-spacing);
+  padding: var(--mfn-spacing);
+  background-color: var(--mfn-bg-color);
+  border: 1px solid var(--mfn-border-color);
+  border-radius: 4px;
+  color: var(--mfn-text-color);
+  font-family: var(--mfn-font-family);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.missing-file-notification--fixed {
+  position: fixed;
+  top: var(--mfn-fixed-top, 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--mfn-fixed-max-width, 400px);
+  z-index: var(--mfn-fixed-z-index, 1000);
+}
+
+.missing-file-notification__icon {
+  flex-shrink: 0;
+  margin-top: 0.1em;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--mfn-icon-color);
+}
+
+.missing-file-notification__content {
+  flex: 1;
+}
+
+.missing-file-notification__title {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--mfn-text-color);
+}
+
+.missing-file-notification__message {
+  margin: 0;
+}
+
+.missing-file-notification__close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0.25em;
+  color: var(--mfn-icon-color);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.missing-file-notification__close:hover {
+  background-color: var(--mfn-close-hover-bg);
+}
+
+.missing-file-notification__close:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--mfn-border-color);
+}
+
+@media (min-width: 640px) {
+  .missing-file-notification {
+    padding: calc(var(--mfn-spacing) * 1.25);
+  }
+  .missing-file-notification__icon,
+  .missing-file-notification__close {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .missing-file-notification__close {
+    transition: none;
+  }
+}
