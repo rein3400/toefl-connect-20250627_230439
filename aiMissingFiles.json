@@ -1,0 +1,236 @@
+{
+  "pseudocode": "// Placeholder added to match AI plan structure",
+  "aiMissingFiles": {
+    "missingFiles": [
+      {
+        "path": "index.html",
+        "type": "html",
+        "description": "Main landing page",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "styles/main.css",
+        "type": "css",
+        "description": "Global styles and responsive layout",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "styles/blog.css",
+        "type": "css",
+        "description": "Styles for blog pages",
+        "required": true,
+        "status": "missing",
+        "priority": "medium"
+      },
+      {
+        "path": "scripts/app.js",
+        "type": "js",
+        "description": "Core site logic and module loader",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "scripts/calendar.js",
+        "type": "js",
+        "description": "Mentoring bookings calendar integration",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "scripts/formEmbed.js",
+        "type": "js",
+        "description": "Google Forms embedding for test simulations",
+        "required": true,
+        "status": "missing",
+        "priority": "medium"
+      },
+      {
+        "path": "data/books.json",
+        "type": "json",
+        "description": "Digital PDF store inventory",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "data/mentors.json",
+        "type": "json",
+        "description": "Mentor profiles and availability",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "data/blogPosts.json",
+        "type": "json",
+        "description": "Metadata for blog posts",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "data/sampleData.csv",
+        "type": "csv",
+        "description": "Sample CSV data for analytics demo",
+        "required": false,
+        "status": "missing",
+        "priority": "low"
+      },
+      {
+        "path": ".env.example",
+        "type": "env",
+        "description": "Template for environment variables",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": "README.md",
+        "type": "md",
+        "description": "Project overview and setup instructions",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      },
+      {
+        "path": ".gitignore",
+        "type": "gitignore",
+        "description": "Ignored files and folders configuration",
+        "required": true,
+        "status": "missing",
+        "priority": "high"
+      }
+    ]
+  },
+  "reviewFeedback": [
+    {
+      "description": "Multiple high-priority required files (index.html, styles/main.css, scripts/app.js, scripts/calendar.js, data/books.json, data/mentors.json, data/blogPosts.json, README.md, .gitignore) are marked as missing, preventing the project from building or running.",
+      "severity": "critical",
+      "recommendation": "Create or restore all high-priority required files before proceeding with further development."
+    },
+    {
+      "description": "The .env.example file is marked as optional, yet environment variable templates are typically essential for consistent local and CI/CD configurations.",
+      "severity": "major",
+      "recommendation": "Set .env.example?s required flag to true and increase its priority to high so developers have a clear template for environment setup."
+    },
+    {
+      "description": "The .gitignore entry uses type \"txt\", which may not be recognized by tooling expecting a gitignore file type.",
+      "severity": "minor",
+      "recommendation": "Update the type field to \"gitignore\" (or a more precise classification) to ensure proper tooling and editor support."
+    }
+  ],
+  "researchNotes": [
+    "AI-listed file not found in sheet ? added during plan confirmation"
+  ],
+  "projectPlan": {
+    "projectSummary": "TOEFL Connect is a mobile-first, accessible, responsive static website built with semantic HTML5, modular CSS, and ES6 JavaScript modules. It features a digital PDF store, mentoring bookings with calendar integration, embedded test simulations via Google Forms, an educational blog, and a contact portal for student-mentor communication. Hosted via CDN (Netlify/Vercel), with serverless functions for order processing and email notifications. CSS architecture uses base.css, layout.css, components.css, utilities.css, and pages.css. JavaScript modules are orchestrated by app.js, which imports and initializes each feature module.",
+    "architecture": {
+      "clientCentricStaticSite": "Entry point: index.html",
+      "cssModules": ["base.css", "layout.css", "components.css", "utilities.css", "pages.css"],
+      "scripts": {
+        "appJs": "Imports and initializes feature modules on DOMContentLoaded via ES6 modules",
+        "modulesOrder": [
+          "uicomponents.js",
+          "datetimepickercomponent.js",
+          "paginationcomponent.js",
+          "socialsharecomponent.js",
+          "apiservice.js",
+          "analyticsservice.js",
+          "formvalidator.js",
+          "storemodule.js",
+          "cartmodule.js",
+          "bookingmodule.js",
+          "simulationmodule.js",
+          "blogmodule.js",
+          "contactmodule.js"
+        ]
+      },
+      "serverlessFunctions": ["functions/processOrder.js", "functions/sendConfirmationEmail.js"],
+      "dataAssets": ["assets/data/products.json", "assets/data/packages.json", "assets/data/blogPosts.json", "assets/data/mentors.json"]
+    },
+    "flow": [
+      "Browser requests index.html; CDN serves static files.",
+      "index.html loads CSS modules and app.js.",
+      "app.js imports and initializes core and feature modules on DOMContentLoaded:",
+      "uicomponents.js registers global UI elements (buttons, modals, alerts, spinners).",
+      "datetimepickercomponent.js wires up calendar inputs for bookings.",
+      "paginationcomponent.js attaches controls to blog listings.",
+      "socialsharecomponent.js binds share buttons on blog and resources.",
+      "apiservice.js configures base URLs and headers for JSON assets and serverless endpoints.",
+      "analyticsservice.js initializes Google Analytics and Tag Manager.",
+      "formvalidator.js attaches ARIA-compliant validation logic to forms.",
+      "Feature modules (store, cart, booking, simulation, blog, contact) read data-page or data-feature attributes, fetch data via apiservice.js, render UI via uicomponents.js, and handle interactions.",
+      "Cart and booking actions invoke functions/processOrder.js; upon successful payment, functions/sendConfirmationEmail.js sends confirmation emails.",
+      "analyticsservice.js captures events such as add-to-cart, booking-confirmation, form-submission, and page views.",
+      "simulationmodule.js embeds Google Forms iframes for test practice.",
+      "UI state is managed in-memory; only processOrder and email functions persist data.",
+      "No-JavaScript fallbacks ensure core content accessibility. SEO-friendly meta tags and dynamic document.title are defined in index.html."
+    ],
+    "features": [
+      "Responsive top navigation bar (Home, TOEFL ITP, TOEFL iBT, Kursus, Blog, Kontak Kami) with mobile menu toggle.",
+      "Accessible skip-link, visible focus styles, and ARIA roles for landmark regions (header, nav, main, footer).",
+      "Custom color palette (white, #e97311, #1a1a1a) and WCAG 2.1 AA compliance defined in base.css.",
+      "Digital PDF store with topic and level filters.",
+      "Shopping cart displayed in a drawer or modal UI.",
+      "Secure checkout via functions/processOrder.js and email notifications via functions/sendConfirmationEmail.js.",
+      "Mentoring package catalog with datetimepickercomponent.js and integrated payment flow.",
+      "Embedded Google Forms simulations for test practice.",
+      "Educational blog with pagination support.",
+      "Social sharing buttons on blog posts and resource pages.",
+      "Contact page featuring mentor profiles (data from mentors.json) and inquiry form.",
+      "Client-side form validation with ARIA alerts provided by formvalidator.js.",
+      "Performance optimizations: code splitting by feature, lazy loading of heavy modules, and image optimization.",
+      "Analytics integration via Google Analytics and Tag Manager.",
+      "SEO-friendly meta tags and dynamic document.title in index.html."
+    ],
+    "files": [
+      "index.html",
+      "app.js",
+      "base.css",
+      "layout.css",
+      "components.css",
+      "utilities.css",
+      "pages.css",
+      "uicomponents.js",
+      "datetimepickercomponent.js",
+      "paginationcomponent.js",
+      "socialsharecomponent.js",
+      "apiservice.js",
+      "analyticsservice.js",
+      "formvalidator.js",
+      "storemodule.js",
+      "cartmodule.js",
+      "bookingmodule.js",
+      "simulationmodule.js",
+      "blogmodule.js",
+      "contactmodule.js",
+      "assets/data/products.json",
+      "assets/data/packages.json",
+      "assets/data/blogPosts.json",
+      "assets/data/mentors.json",
+      "functions/processOrder.js",
+      "functions/sendConfirmationEmail.js",
+      "netlify.toml",
+      ".env",
+      ".eslintrc.json",
+      ".prettierrc"
+    ],
+    "notes": [
+      "Adopt Git-based workflows with a protected main branch.",
+      "Enforce ESLint and Prettier on all .js and .css files.",
+      "Configure CI/CD pipelines on Netlify or Vercel to run linting and builds on each push.",
+      "Secure environment variables for API keys in .env.",
+      "Adhere to WCAG 2.1 guidelines.",
+      "Include SEO meta tags and dynamic titles.",
+      "Implement error handling and no-JavaScript fallbacks for core content."
+    ]
+  },
+  "globalIssues": [],
+  "projectTypeNotes": "index.html, .css, .js for site logic and styles. No images/assets. Includes common code and data file types like .json, .csv, .md, .env, .txt, and logs. No images or assets."
+}
