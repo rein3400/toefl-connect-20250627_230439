@@ -1,5 +1,5 @@
 import * as apiService from './js/apiservice.js';
-import cartModule from './cartmodule.js';
+import cartModule from './cartUICheckoutManager.js';
 
 const containerSelector = '#pdf-listing';
 const filterFormSelector = '#pdf-filter-form';
