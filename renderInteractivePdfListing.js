@@ -1,4 +1,4 @@
-import * as apiService from './apiservice.js';
+import * as apiService from './js/apiservice.js';
 import cartModule from './cartmodule.js';
 
 const containerSelector = '#pdf-listing';

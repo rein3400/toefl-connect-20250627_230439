@@ -1,5 +1,5 @@
 import formValidator from './ariaFormValidator.js';
-import apiService from './apiservice.js';
+import apiService from './js/apiservice.js';
 import uiComponents from './uiComponentLibrary.js';
 
 const CONTACT_FORM_SELECTOR = '#contact-form';
