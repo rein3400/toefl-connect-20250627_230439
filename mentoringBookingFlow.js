@@ -1,5 +1,5 @@
 import * as formValidator from './ariaFormValidator.js';
-import * as apiService from './apiservice.js';
+import * as apiService from './js/apiservice.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#booking-form');

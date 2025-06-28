@@ -1,4 +1,4 @@
-import * as apiService from './apiservice.js';
+import * as apiService from './js/apiservice.js';
 
 let listContainer;
 let detailContainer;
