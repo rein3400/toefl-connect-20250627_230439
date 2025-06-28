@@ -1,0 +1,8 @@
+// Placeholder added to match AI plan structure
+
+Filename,Title,Description
+advanced_vocab_guide.pdf,Advanced TOEFL Vocabulary Guide,Comprehensive list of high-frequency TOEFL words with usage examples
+pronunciation_tips.pdf,Pronunciation Practice Tips,Exercises to improve English pronunciation for TOEFL
+essay_structure_handbook.pdf,TOEFL Essay Structure Handbook,Step-by-step guide to structure essays for both integrated and independent tasks
+listening_strategies.pdf,Listening Comprehension Strategies,Techniques to improve listening comprehension accuracy
+reading_skills_workbook.pdf,Reading Skills Workbook,Practice passages with question types and strategies
