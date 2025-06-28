@@ -1,0 +1,130 @@
+:root {
+  --cmf-overlay-bg: rgba(0, 0, 0, 0.5);
+  --cmf-bg: #ffffff;
+  --cmf-primary: #1a73e8;
+  --cmf-primary-hover: #1666c2;
+  --cmf-secondary: #5f6368;
+  --cmf-secondary-hover: #4f5257;
+  --cmf-text: #202124;
+  --cmf-border-radius: 0.5rem;
+  --cmf-spacing: 1rem;
+  --cmf-transition-duration: 0.3s;
+  --cmf-transition-easing: ease;
+  --cmf-border-color: #e0e0e0;
+}
+
+.confirm-missing-file__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cmf-overlay-bg);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.confirm-missing-file__overlay--active {
+  display: flex;
+}
+
+.confirm-missing-file__dialog {
+  background-color: var(--cmf-bg);
+  color: var(--cmf-text);
+  border-radius: var(--cmf-border-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 24rem;
+  margin: var(--cmf-spacing);
+  display: flex;
+  flex-direction: column;
+  animation: cmf-fadeIn var(--cmf-transition-duration) var(--cmf-transition-easing) forwards;
+}
+
+.confirm-missing-file__header {
+  padding: var(--cmf-spacing);
+  border-bottom: 1px solid var(--cmf-border-color);
+}
+
+.confirm-missing-file__title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.confirm-missing-file__body {
+  padding: var(--cmf-spacing);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.confirm-missing-file__footer {
+  padding: var(--cmf-spacing);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--cmf-spacing);
+  border-top: 1px solid var(--cmf-border-color);
+}
+
+.confirm-missing-file__button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  border: none;
+  border-radius: var(--cmf-border-radius);
+  cursor: pointer;
+  transition: background-color var(--cmf-transition-duration) var(--cmf-transition-easing);
+}
+
+.confirm-missing-file__button:focus-visible {
+  outline: 2px solid var(--cmf-primary);
+  outline-offset: 2px;
+}
+
+.confirm-missing-file__button--primary {
+  background-color: var(--cmf-primary);
+  color: #ffffff;
+}
+
+.confirm-missing-file__button--primary:hover {
+  background-color: var(--cmf-primary-hover);
+}
+
+.confirm-missing-file__button--secondary {
+  background-color: var(--cmf-secondary);
+  color: #ffffff;
+}
+
+.confirm-missing-file__button--secondary:hover {
+  background-color: var(--cmf-secondary-hover);
+}
+
+@keyframes cmf-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confirm-missing-file__dialog,
+  .confirm-missing-file__button {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 20rem) {
+  .confirm-missing-file__dialog {
+    width: 100%;
+    margin: 0.5rem;
+  }
+}
