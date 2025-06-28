@@ -1,4 +1,4 @@
-import formValidator from './ariaFormValidator.js';
+import { validate } from './ariaFormValidator.js';
 import apiService from './js/apiservice.js';
 import * as uiComponents from './uiComponentLibrary.js';
 
@@ -23,7 +23,7 @@ function collectContactData(form) {
 async function handleSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
-  if (!formValidator.validate(form)) return;
+  if (!validate(form)) return;
   const inquiry = collectContactData(form);
   const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
   if (submitBtn) {
