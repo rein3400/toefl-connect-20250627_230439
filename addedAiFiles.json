@@ -1,0 +1,84 @@
+{
+  "manifestVersion": "1.0",
+  "generatedAt": "2025-06-28T12:00:00Z",
+  "files": [
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "html",
+      "description": "Landing page with hero section, navigation, and featured services."
+    },
+    {
+      "name": "store.html",
+      "path": "store.html",
+      "type": "html",
+      "description": "Digital PDF store interface for TOEFL materials."
+    },
+    {
+      "name": "booking.html",
+      "path": "booking.html",
+      "type": "html",
+      "description": "Mentoring booking page with integrated calendar for scheduling."
+    },
+    {
+      "name": "test.html",
+      "path": "test.html",
+      "type": "html",
+      "description": "Embedded Google Forms TOEFL test simulation page."
+    },
+    {
+      "name": "blog.html",
+      "path": "blog.html",
+      "type": "html",
+      "description": "Blog listing page with summaries and links to individual posts."
+    },
+    {
+      "name": "css/styles.css",
+      "path": "css/styles.css",
+      "type": "css",
+      "description": "Global and modular styles for mobile-first, responsive layout."
+    },
+    {
+      "name": "js/main.js",
+      "path": "js/main.js",
+      "type": "js",
+      "description": "Core site logic: navigation toggles, event listeners, and shared utilities."
+    },
+    {
+      "name": "js/store.js",
+      "path": "js/store.js",
+      "type": "js",
+      "description": "Store cart logic, PDF preview and download handling."
+    },
+    {
+      "name": "js/booking.js",
+      "path": "js/booking.js",
+      "type": "js",
+      "description": "Mentoring booking calendar integration and form submission."
+    },
+    {
+      "name": "js/test.js",
+      "path": "js/test.js",
+      "type": "js",
+      "description": "Test simulation embedding and result capture."
+    },
+    {
+      "name": "js/blog.js",
+      "path": "js/blog.js",
+      "type": "js",
+      "description": "Blog post loading, filtering, and navigation."
+    },
+    {
+      "name": "posts/sample-post.md",
+      "path": "posts/sample-post.md",
+      "type": "md",
+      "description": "Template for new educational blog posts."
+    },
+    {
+      "name": ".env.example",
+      "path": ".env.example",
+      "type": "env",
+      "description": "Environment variable placeholders for API keys and configuration."
+    }
+  ]
+}
