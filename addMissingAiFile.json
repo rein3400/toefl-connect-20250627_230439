@@ -1,0 +1,70 @@
+{
+  "defaultEnvironment": "development",
+  "environments": {
+    "development": {
+      "site": {
+        "url": "https://dev.toeflconnect.example.com"
+      }
+    },
+    "staging": {
+      "site": {
+        "url": "https://staging.toeflconnect.example.com"
+      }
+    },
+    "production": {}
+  },
+  "site": {
+    "title": "TOEFL Connect",
+    "description": "A mobile-first, accessible static site for TOEFL preparation with digital resources, mentoring, and practice tests.",
+    "url": "https://toeflconnect.example.com",
+    "locale": "en-US",
+    "author": "TOEFL Connect Team"
+  },
+  "features": {
+    "pdfStore": {
+      "itemsData": "data/storeItems.json",
+      "currency": "USD"
+    },
+    "mentoring": {
+      "bookingEndpoint": "/api/bookings",
+      "calendar": {
+        "provider": "Google Calendar",
+        "apiKeyEnvVar": "GOOGLE_CALENDAR_API_KEY"
+      }
+    },
+    "testSimulations": {
+      "googleFormsUrls": [
+        "https://forms.gle/reading-simulation",
+        "https://forms.gle/listening-simulation",
+        "https://forms.gle/speaking-simulation",
+        "https://forms.gle/writing-simulation"
+      ]
+    },
+    "blog": {
+      "postsData": "data/blogPosts.json",
+      "postsPerPage": 10
+    }
+  },
+  "theme": {
+    "colors": {
+      "primary": "#0052CC",
+      "secondary": "#E6F0FF",
+      "accent": "#FF9900",
+      "text": "#333333",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "base": "Arial, sans-serif",
+      "heading": "Georgia, serif"
+    }
+  },
+  "analytics": {
+    "googleAnalyticsIdEnvVar": "GOOGLE_ANALYTICS_ID"
+  },
+  "aiIntegration": {
+    "enabled": true,
+    "provider": "openai",
+    "model": "gpt-4",
+    "apiKeyEnvVar": "OPENAI_API_KEY"
+  }
+}
